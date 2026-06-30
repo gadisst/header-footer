@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laundry Kita</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    /* Tambahkan style dasar agar tidak berantakan */
-    body { padding-top: 60px; }
-    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER KAMU -->
   <header>
     <div class="container nav-wrapper">
       <div class="logo">LAUNDRY<span>KITA</span></div>
@@ -42,13 +39,21 @@
     </div>
   </header>
 
-  <!-- KONTEN UTAMA (Silakan isi section konten kamu di sini) -->
-  <main style="min-height: 500px; padding: 20px;">
-    <h1>Selamat Datang di Laundry Kita</h1>
-    <p>Ini adalah website asli saya.</p>
+  <main>
+    <section id="hero">
+      <div class="container text-center">
+        <h1 class="hero-title">Laundry Profesional untuk Anda</h1>
+        <p class="hero-subtitle">Bersih, Cepat & Praktis.</p>
+      </div>
+    </section>
+    
+    <section id="cara-kerja" class="sec sec-alt">
+      <div class="container text-center">
+        <h2 class="sec-title">Layanan Kami</h2>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER KAMU -->
   <footer id="kontak">
     <div class="footer-inner">
       <p class="footer-brand">LAUNDRY<span>KITA</span></p>
@@ -66,7 +71,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Kode interaktif kamu
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobile-nav');
     if(hamburger) {
@@ -74,6 +78,10 @@
             hamburger.classList.toggle('open');
             mobileNav.classList.toggle('open');
         });
+    }
+    function closeMobileNav() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
     }
   </script>
 </body>
